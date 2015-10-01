@@ -21,7 +21,7 @@ gulp.task('jshint', function() {
 gulp.task('sass', function() {
 	return gulp.src('site/scss/*.scss')
 		.pipe(sass())
-		.pipe(gulp.dest('site/css'));
+		.pipe(gulp.dest('build/css'));
 });
 
 // Minify index
@@ -33,12 +33,10 @@ gulp.task('html', function() {
 
 // JavaScript build task, removes whitespace and concatenates all files
 gulp.task('scripts', function() {
-	return browserify('./site/js/main.js')
-		.bundle()
-		.pipe(source('app.js'))
-		.pipe(buffer())
+	return gulp.src('site/js/*.js')
+		.pipe(concat('app.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('build/js'));
+		.pipe(gulp.dest('./build/js'));
 });
 
 // Styles build task, concatenates all the files
@@ -52,13 +50,15 @@ gulp.task('styles', function() {
 gulp.task('images', function() {
 	return gulp.src('site/images/*')
 		.pipe(imagemin())
-		.pipe(gulp.dest('build/img'));
+		.pipe(gulp.dest('build/images'));
 });
 
 // Watch task
 gulp.task('watch', function() {
 	gulp.watch('site/js/*.js', ['jshint']);
 	gulp.watch('site/scss/*.scss', ['sass']);
+	gulp.watch('site/index.html', ['html']);
+	console.log('Gulp is running...');
 });
 
 // Default task
