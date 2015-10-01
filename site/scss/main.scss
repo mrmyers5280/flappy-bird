@@ -1,0 +1,21 @@
+/**** main.scss ****/
+$header-font: 'Press Start 2P', cursive;
+
+ol, ul {
+	list-style: none;
+}
+nav {
+	li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+header {
+	text-align: center;
+}
+h1 {
+	font-family: $header-font;
+}
