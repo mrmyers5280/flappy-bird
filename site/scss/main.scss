@@ -13,9 +13,17 @@ nav {
 		text-decoration: none;
 	}
 }
-header {
+body {
 	text-align: center;
 }
 h1 {
 	font-family: $header-font;
+}
+.features {
+	img {
+		width: 90%;
+	}
+	ul {
+		padding-left: 0;
+	}
 }
