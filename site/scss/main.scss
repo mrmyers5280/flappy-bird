@@ -22,9 +22,22 @@ h1 {
 .features {
 	img {
 		width: 90%;
+		@media screen and (min-width: 500px) {
+			width: 300px;
+		}
 	}
 	ul {
 		padding-left: 0;
+	}
+	li {
+		@media screen and (min-width: 750px) {
+			display: inline-block;
+			padding: 25px 10px 0 10px;
+		}
+	}
+	p {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 .call-to-action {
