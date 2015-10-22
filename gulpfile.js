@@ -44,11 +44,11 @@ gulp.task('scripts', function() {
 });
 
 // Styles build task, concatenates all the files
-gulp.task('styles', function() {
-	return gulp.src('site/css/*.css')
-		.pipe(concat('styles.css'))
-		.pipe(gulp.dest('build/css'));
-});
+// gulp.task('styles', function() {
+// 	return gulp.src('site/css/*.css')
+// 		.pipe(concat('styles.css'))
+// 		.pipe(gulp.dest('build/css'));
+// });
 
 // Image optimization task
 gulp.task('images', function() {
@@ -76,4 +76,4 @@ gulp.task('watch', function() {
 gulp.task('default', ['jshint', 'scripts', 'sass', 'connect', 'watch']);
 
 // Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
+gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'images']);
