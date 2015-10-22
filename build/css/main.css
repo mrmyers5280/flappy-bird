@@ -2,12 +2,13 @@
 ol, ul {
   list-style: none; }
 
+a {
+  text-decoration: none;
+  color: #74BF2E; }
+
 nav li {
   display: inline-block;
   margin-right: 20px; }
-
-nav a {
-  text-decoration: none; }
 
 body {
   text-align: center; }
@@ -36,7 +37,12 @@ h1 {
 .call-to-action {
   margin: 25px 0; }
   .call-to-action button {
-    padding: 10px 50px; }
+    padding: 10px 50px;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #74BF2E; }
+  .call-to-action a {
+    color: #ffffff; }
 
 footer {
   font-size: .812em; }
